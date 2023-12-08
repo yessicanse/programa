@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+
+/*CSS Reset*/
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+body {
+
+    font-family: 'Poppins', sans-serif;
+
+}
+
+/*Navegación*/
+
+header{
+    width:100%;
+    height: 100vh;
+    background-image: url(images/fondo\ final.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+nav {
+    height: 100px;
+    max-width: 1200px;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 150px;
+    margin-left: 20px;
+
+}
+
+.bar-btn {
+    font-size: 30px;
+    color: black;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.nav-menu {
+    position: fixed;
+    width: 100%;
+    height: 0vh;
+    top: 100px;
+    background: rgba(216, 143, 70, 0.921);
+    text-align: center;
+    transition: all 0.5s;
+}
+
+.nav-menu li {
+    display: none;
+    line-height: 30px;
+    margin: 50px 0;
+    transition: all 0.5s;
+}
+
+.nav-menu li a {
+
+    color: #0c0b0b;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.nav-menu li a.active,
+.nav-menu li a:hover {
+    color: #ea3a0e;
+    transition: 0.3s;
+}
+
+#check {
+    display: none;
+}
+
+#check:checked ~ .nav-menu {
+    height: 100vh;
+}
+
+#check:checked ~ .nav-menu li{
+    display: block;
+}
+
+
+.banner-text{
+    padding-top: 80px;
+    text-align: center;
+}
+
+.banner-tex h1 {
+    color: #fff;
+    font-size: 30px;
+    padding: 50px;
+}
+
+
+.btn-a {
+    display: inline-block;
+    background-color: #ffbf00;
+    margin-top: 80px;
+    padding: 15px 30px;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 25px;
+}
+
+.btn-a:hover {
+    background-color: #812f02;
+}
+
+@media (min-width: 768px) {
+
+    .logo {
+        margin-left: 0;
+    }
+    header {
+        height: 100vh;
+    }
+
+    nav {
+        height: 100px;
+        margin: 0 auto;
+    }
+
+    .bar-btn {
+        display: none;
+    }
+
+    .nav-menu {
+        position: relative;
+        height: 100px;
+        top: 0;
+        background: none;
+        transition: none;
+        text-align: right;
+        margin-right: 50px;
+    }
+
+    .nav-menu li {
+        display: inline-block;
+        line-height: 100px;
+        margin: 0 20px;
+        transition: none;
+    }
+
+    .nav-menu li a {
+        font-size: 18px;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .banner-tex {
+        padding-top: 250px;
+    }
+
+    .banner-tex h1 {
+        font-size: 55px;
+    }
+
+    .banner-tex p {
+        padding: 30px 200px;
+    }
+}
